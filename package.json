@@ -1,0 +1,19 @@
+{
+  "name": "openapi-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "mock": "prism mock ./sample.json",
+    "build": "npx redoc-cli bundle sample.json --options.noAutoAuth=true --options.disableSearch=true --options.hideDownloadButton=true --options.expandResponses=all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KanDai/openapi-sample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@stoplight/prism-cli": "^4.2.5"
+  }
+}
