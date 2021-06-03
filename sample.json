@@ -214,6 +214,61 @@
         },
         "description": "Create a new user."
       }
+    },
+    "/all_users/": {
+      "get": {
+        "summary": "GET All User",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/User"
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": [
+                      {
+                        "id": 0,
+                        "firstName": "string",
+                        "lastName": "string",
+                        "email": "user@example.com",
+                        "dateOfBirth": "1997-10-31",
+                        "emailVerified": true,
+                        "createDate": "2019-08-24"
+                      },
+                      {
+                        "id": 1,
+                        "firstName": "string",
+                        "lastName": "string",
+                        "email": "user@example.com",
+                        "dateOfBirth": "1997-10-31",
+                        "emailVerified": true,
+                        "createDate": "2019-08-24"
+                      },
+                      {
+                        "id": 2,
+                        "firstName": "string",
+                        "lastName": "string",
+                        "email": "user@example.com",
+                        "dateOfBirth": "1997-10-31",
+                        "emailVerified": true,
+                        "createDate": "2019-08-24"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-all_users"
+      }
     }
   },
   "components": {
